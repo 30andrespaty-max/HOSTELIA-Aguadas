@@ -1,0 +1,229 @@
+.hotel-banner {
+  background: linear-gradient(120deg, #fef8ef 0%, #f3e8db 60%, #efe1cf 100%);
+  border-bottom: 1px solid #efe3d4;
+  padding: 26px 0 34px;
+  margin-bottom: 44px;
+  box-shadow: 0 16px 32px rgba(45, 37, 29, 0.10);
+}
+
+.hotel-banner-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 26px;
+  align-items: center;
+  padding: 26px 0;
+}
+
+.hotel-banner-copy h2 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  line-height: 1.1;
+  margin: 6px 0 10px;
+}
+
+.hotel-banner-copy p {
+  color: var(--muted);
+  max-width: 58ch;
+}
+
+.hotel-banner-copy .hint {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+  font-weight: 600;
+  color: #3d352d;
+}
+
+.hotel-selector {
+  position: relative;
+}
+
+.selector-trigger {
+  width: 100%;
+  text-align: left;
+  background: #2f5843;
+  color: #fdf7ed;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 12px 28px rgba(47, 88, 67, 0.22);
+}
+
+.selector-panel {
+  margin-top: 10px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 14px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(10px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.hotel-selector:hover .selector-panel,
+.hotel-selector:focus-within .selector-panel,
+.hotel-selector.is-open .selector-panel {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.hotel-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.hotel-item {
+  padding: 12px 12px;
+  border: 1px solid #e8dcc7;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #fbf4e8, #f8efe3);
+  cursor: pointer;
+  font-weight: 700;
+  color: #3f352e;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.2s ease;
+}
+
+.hotel-item:hover,
+.hotel-item:focus {
+  outline: none;
+  border-color: #b88a3b;
+  box-shadow: 0 10px 24px rgba(184, 138, 59, 0.18);
+  transform: translateY(-2px);
+}
+
+.hotel-item.is-active {
+  border-color: #2f5843;
+  box-shadow: 0 10px 24px rgba(47, 88, 67, 0.2);
+  background: linear-gradient(135deg, #f7efe0, #e8f1ea);
+}
+
+.hotel-detail {
+  background: #fefbf6;
+  border: 1px dashed #e0cfb5;
+  border-radius: 12px;
+  padding: 14px;
+  display: grid;
+  gap: 8px;
+}
+
+.hotel-detail h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: var(--forest);
+}
+
+.hotel-detail p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.detail-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 0.92rem;
+  color: #4b433b;
+}
+
+.detail-meta span {
+  background: #f1e5d5;
+  padding: 6px 10px;
+  border-radius: 999px;
+}
+
+.detail-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+@media (max-width: 900px) {
+  .hotel-banner-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .selector-panel {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  .selector-panel {
+    position: relative;
+    opacity: 1;
+    pointer-events: auto;
+    transform: none;
+  }
+}
+
+/* Dropdown de hoteles en el menú principal */
+.nav-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.nav-drop-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 220px;
+  background: #fffdf7;
+  border: 1px solid #e6d8c2;
+  border-radius: 12px;
+  box-shadow: 0 14px 32px rgba(45, 37, 29, 0.14);
+  padding: 10px;
+  display: grid;
+  gap: 6px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.16s ease, transform 0.18s ease;
+  z-index: 15;
+}
+
+.dropdown-menu a {
+  text-decoration: none;
+  color: #3f352d;
+  font-weight: 600;
+  padding: 8px 10px;
+  border-radius: 8px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.dropdown-menu a:hover,
+.dropdown-menu a:focus {
+  background: #f3e8db;
+  color: #2f5843;
+  outline: none;
+}
+
+.nav-dropdown:hover .dropdown-menu,
+.nav-dropdown:focus-within .dropdown-menu {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, 0);
+}
