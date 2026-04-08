@@ -1,0 +1,374 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HOSTELIA-Aguadas</title>
+  <link rel="icon" type="image/svg+xml" href="../IMG/img/logoh.svg" />
+  <meta name="description" content="Reserva tu hotel de preferencia en Aguadas, Caldas" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../CSS/styleprincipal.css" />
+  <link rel="stylesheet" href="../CSS/hoteles.css" />
+   
+</head>
+<body>
+
+  <!-- Intro animada -->
+  <div class="page-intro" id="page-intro" aria-hidden="true">
+    <div class="intro-logo">Hostelia</div>
+  </div>
+
+  <!-- Aviso de cookies (bloqueante) -->
+  <div class="cookie-overlay open" id="cookie-overlay" role="dialog" aria-modal="true" aria-label="Aviso de cookies">
+    <div class="cookie-card">
+      <div class="cookie-text">
+        <strong>Se aceptan todas las cookies</strong>
+        <span>Utilizamos cookies propias y de terceros para optimizar el rendimiento y analizar el tráfico de forma anónima. Elige si aceptas o rechazas.</span>
+      </div>
+      <div class="cookie-actions">
+        <button class="btn btn-secondary" id="cookie-reject-btn" type="button">Rechazar</button>
+        <button class="btn btn-primary" id="cookie-accept-btn" type="button">Aceptar</button>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="container nav">
+      <a class="brand-mark" href="#top" aria-label="Ir al inicio de Hostelia">
+        <img src="../IMG/img/logopagina.png" alt="Hostelia" />
+        <span class="brand-name">
+          HOSTELIA
+          <span class="brand-spark brand-spark-one" aria-hidden="true"></span>
+          <span class="brand-spark brand-spark-two" aria-hidden="true"></span>
+          <span class="brand-spark brand-spark-three" aria-hidden="true"></span>
+        </span>
+      </a>
+      <div class="nav-links">
+        <a class="active" href="#top">Inicio</a>
+        <div class="nav-dropdown">
+          <a class="nav-drop-toggle" href="#hoteles" aria-haspopup="true" aria-expanded="false">Hoteles ▾</a>
+          <div class="dropdown-menu" role="menu">
+            <a href="casablanca.html" role="menuitem">Hotel Casa Blanca</a>
+            <a href="dorado.html" role="menuitem">Hotel El Dorado</a>
+            <a href="entrebrumas.html" role="menuitem">Hotel Entre Brumas</a>
+            <a href="colonial.html" role="menuitem">Hotel Colonial</a>
+            <a href="#hoteles" role="menuitem">Selector rápido (en esta página)</a>
+          </div>
+        </div>
+        <a href="productos.html">Productos</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#galeria">Galería</a>
+        <a href="paginas/contacto.html">Contacto</a>
+        <a href="paginas/nosotros.html">Nosotros</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Modal de registro (solo se muestra la primera vez) -->
+  <div class="modal-backdrop" id="signup-modal" role="dialog" aria-modal="true" aria-labelledby="signup-title">
+    <div class="modal-card">
+      <h2 id="signup-title">Registro rapido de visitantes</h2>
+      <p>Para continuar navegando, registra tus datos basicos. Este registro es obligatorio y no es una reserva de estadia.</p>
+      <form class="modal-form" id="signup-form" action="#" method="post">
+        <label>
+          Nombre completo
+          <input type="text" name="nombre" placeholder="Tu nombre" required />
+        </label>
+        <label>
+          Correo electrónico
+          <input type="email" name="correo" placeholder="tu@correo.com" required />
+        </label>
+        <label>
+          Ciudad o pais (opcional)
+          <input type="text" name="ubicacion" placeholder="Ej. Medellín, Colombia" />
+        </label>
+        <div class="modal-actions" style="justify-content: flex-end;">
+          <button class="btn btn-primary" type="submit">Registrar y continuar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <main>
+    <!-- Ancla para el menú "Hoteles" (se oculta el contenido redundante) -->
+    <div id="hoteles" aria-hidden="true"></div>
+
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="reveal">
+          <a
+            class="tag tag-link"
+            href="https://www.google.com/maps/search/?api=1&query=Aguadas%2C+Caldas%2C+Colombia"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            AGUADAS, CALDAS
+          </a>
+          <h1>"Aguadas: el pasillo que nos mueve...el sombrero que nos une"
+      
+          </h1>
+          <p class="lead">
+           Ven a vivir la esencia de Caldas en el pueblo donde el arte se teje y la música se siente. Descubre paisajes coloniales y una cultura única que te espera con los brazos abiertos.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-ghost" href="historia-aguadas.html"><span>Ver historia y tradición</span></a>
+          </div>
+        </div>
+
+        <aside class="hero-card reveal">
+          <img class="hero-photo" src="../IMG/img/panorama2.jpg" alt="Panorama de Aguadas" />
+        </aside>
+      </div>
+    </section>
+
+    <section id="servicios">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Opiniones Reales de Visitantes</h2>
+          <p>Reseñas publicas de tres lugares diferentes de Aguadas, Caldas (fuente: Tripadvisor).</p>
+        </div>
+        <div class="features">
+          <article class="feature reveal">
+            <strong>Cacique Pipinta</strong>
+            <div class="feature-rating" aria-label="Calificacion 4.3 de 5">
+              <span class="feature-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+              <span>4.3/5 (8 opiniones)</span>
+            </div>
+            <p>"Una excelente vista panoramica del municipio."</p>
+            <p><small>- Marco Antonio Sepulveda Sanguino, mar 2019</small></p>
+          </article>
+          <article class="feature reveal">
+            <strong>Monumento a la Tejedora</strong>
+            <div class="feature-rating" aria-label="Calificacion 4.7 de 5">
+              <span class="feature-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              <span>4.7/5 (3 opiniones)</span>
+            </div>
+            <p>"Esta bien conservada y es una buena representacion del arte de hacer sombreros aguadenos."</p>
+            <p><small>- Marco Antonio Sepulveda Sanguino, mar 2019</small></p>
+          </article>
+          <article class="feature reveal">
+            <strong>Iglesia de San Antonio de Arma</strong>
+            <div class="feature-rating" aria-label="Calificacion 4.3 de 5">
+              <span class="feature-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+              <span>4.3/5 (3 opiniones)</span>
+            </div>
+            <p>"Un lugar pequeno pero muy acogedor, tranquilo y silencioso."</p>
+            <p><small>- BSanche3, ago 2017</small></p>
+          </article>
+        </div>
+        <p class="section-head reveal" style="margin-top: 14px; margin-bottom: 0; color: #000;">
+          Fuentes:
+          <a href="https://www.tripadvisor.com.pe/Attraction_Review-g4455867-d10542557-Reviews-Cacique_Pipinta-Aguadas_Caldas_Department.html" target="_blank" rel="noopener noreferrer" style="color: #000;">Cacique Pipinta</a>
+          |
+          <a href="https://www.tripadvisor.co/Attraction_Review-g4455867-d10542581-Reviews-Monumento_a_la_Tejedora-Aguadas_Caldas_Department.html" target="_blank" rel="noopener noreferrer" style="color: #000;">Monumento a la Tejedora</a>
+          |
+          <a href="https://www.tripadvisor.es/Attraction_Review-g4455867-d8681184-Reviews-Iglesia_de_San_Antonio_de_Arma-Aguadas_Caldas_Department.html" target="_blank" rel="noopener noreferrer" style="color: #000;">Iglesia de San Antonio de Arma</a>
+        </p>
+      </div>
+    </section>
+
+    <section id="galeria">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Galeria</h2>
+          <p>Un pueblo calido, clasico y familiar.</p>
+        </div>
+        <div class="gallery">
+          <img class="reveal" src="../IMG/img/iglesiafachada.jpg" alt="Fachada del hotel" />
+          <img class="reveal" src="../IMG/img/baile.webp" alt="Interior del hotel" />
+          <img class="reveal" src="../IMG/img/anguloiglesia.jpg" alt="Habitacion del hotel" />
+          <img class="reveal" src="../IMG/img/parqueprincipal.jpg" alt="Sala comun del hotel" />
+        </div>
+      </div>
+    </section>
+
+    <section id="conocenos">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Conocenos</h2>
+          <p>Una zona final para presentarte mejor, ubicar Aguadas y dejar un canal directo de contacto.</p>
+        </div>
+
+        <div class="info-grid">
+          <article class="info-card info-card-feature reveal">
+            <p class="info-kicker">Conocenos</p>
+            <h2>Sobre mi</h2>
+            <p class="info-copy">
+              Soy tecnico en programacion y desarrollo este espacio para mostrar informacion util, clara y cercana sobre Aguadas, sus lugares y sus servicios.
+            </p>
+            <div class="info-points">
+              <span>Formacion tecnica en programacion y enfoque en proyectos web.</span>
+              <span>Interes por crear paginas practicas, ordenadas y faciles de usar.</span>
+              <span>Trabajo con contenido local para resaltar la identidad de Aguadas.</span>
+            </div>
+            <p class="info-phone"><strong>Perfil:</strong> Tecnico en programacion y apoyo en desarrollo de proyectos digitales.</p>
+          </article>
+
+          <article class="info-card reveal">
+            <p class="info-kicker">Mapa de Aguadas</p>
+            <h2>Tierra natal, tierra querida, mi hogar</h2>
+            <p class="info-copy">
+              Aguadas representa origen, memoria y pertenencia. Este espacio busca mostrar con orgullo la esencia de un municipio lleno de cultura, paisaje y tradicion.
+            </p>
+            <div class="info-actions">
+              <a class="btn btn-secondary" href="https://www.google.com/maps/search/?api=1&query=Aguadas%2C+Caldas%2C+Colombia" target="_blank" rel="noopener noreferrer">Ver mapa de Aguadas</a>
+            </div>
+            <p class="social-note">Ubica facilmente el municipio y comparte este destino con mas personas.</p>
+          </article>
+
+          <aside class="info-card reveal">
+            <p class="info-kicker">Contacto</p>
+            <h2>Disponible para contrataciones</h2>
+
+            <div class="contact-list">
+              <div class="contact-item">
+                <span>Telefono</span>
+                <a href="tel:+573127703721">312 770 3721</a>
+              </div>
+              <div class="contact-item">
+                <span>WhatsApp</span>
+                <a href="https://wa.me/573127703721" target="_blank" rel="noopener noreferrer">Escribir ahora</a>
+              </div>
+              <div class="contact-item">
+                <span>Servicio</span>
+                <strong>Contrataciones y apoyo en proyectos</strong>
+              </div>
+            </div>
+
+            <div class="social-links">
+              <a class="social-pill" href="tel:+573127703721">Llamar</a>
+              <a class="social-pill" href="https://wa.me/573127703721" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+              <a class="social-pill" href="#conocenos">Disponible</a>
+            </div>
+
+            <p class="social-note">Si necesitas una cotizacion o quieres hablar sobre una idea, este es el canal directo.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© <span id="year"></span> Hotel El Dorado. Todos los derechos reservados.</div>
+  </footer>
+
+  <script src="../SCRIPT/hoteles.js" defer></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    }, { threshold: 0.16 });
+
+    document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+
+    // Mostrar el formulario de registro solo la primera vez
+    const modal = document.getElementById("signup-modal");
+    const signupForm = document.getElementById("signup-form");
+    const SIGNUP_KEY = "signupCompleted";
+    const cookieOverlay = document.getElementById("cookie-overlay");
+    const cookieAcceptBtn = document.getElementById("cookie-accept-btn");
+    const cookieRejectBtn = document.getElementById("cookie-reject-btn");
+    const COOKIE_KEY = "cookieConsentStatus";
+    const intro = document.getElementById("page-intro");
+
+    const openModal = () => modal?.classList.add("open");
+    const closeModal = () => modal?.classList.remove("open");
+    const showCookieOverlay = () => {
+      cookieOverlay?.classList.add("open");
+      document.body.classList.add("no-scroll");
+    };
+    const hideCookieOverlay = () => {
+      cookieOverlay?.classList.remove("open");
+      document.body.classList.remove("no-scroll");
+    };
+
+    // Solo se abre si el usuario no ha completado el registro antes
+    window.addEventListener("DOMContentLoaded", () => {
+      const alreadyDone = localStorage.getItem(SIGNUP_KEY) === "true";
+      if (alreadyDone) {
+        closeModal();
+      } else {
+        openModal();
+      }
+
+      const cookieStatus = localStorage.getItem(COOKIE_KEY);
+      if (cookieStatus === "accepted" || cookieStatus === "rejected") {
+        hideCookieOverlay();
+      } else {
+        showCookieOverlay();
+      }
+
+      if (intro) {
+        document.body.classList.add("intro-active");
+        setTimeout(() => {
+          intro.remove();
+          document.body.classList.remove("intro-active");
+        }, 1800);
+      }
+    });
+
+    // Marca el registro como completado y no vuelve a mostrarlo
+    signupForm?.addEventListener("submit", (event) => {
+      event.preventDefault();
+      localStorage.setItem(SIGNUP_KEY, "true");
+      closeModal();
+    });
+
+    // Manejo de cookies
+    cookieAcceptBtn?.addEventListener("click", () => {
+      localStorage.setItem(COOKIE_KEY, "accepted");
+      hideCookieOverlay();
+    });
+
+    cookieRejectBtn?.addEventListener("click", () => {
+      localStorage.setItem(COOKIE_KEY, "rejected");
+      hideCookieOverlay();
+    });
+
+    // Estímulo visual bajo cada link al hacer clic
+    const navLinks = Array.from(document.querySelectorAll(".nav a[href]"));
+
+    const setActiveLink = (href) => {
+      navLinks.forEach((link) => {
+        const same = link.href === href || link.getAttribute("href") === href;
+        link.classList.toggle("active", same);
+      });
+    };
+
+    // Restaurar activo previo (entre subpáginas)
+    const savedHref = localStorage.getItem("activeNavHref");
+    if (savedHref) setActiveLink(savedHref);
+
+    const attachLinkUnderline = () => {
+      navLinks.forEach((link) => {
+        const href = link.getAttribute("href") || "";
+        if (link.target === "_blank") return;
+        link.addEventListener("click", () => {
+          // Marca activo y animación
+          navLinks.forEach((l) => l.classList.remove("active"));
+          link.classList.add("active", "loading");
+
+          if (href.startsWith("#")) {
+            setTimeout(() => link.classList.remove("loading"), 650);
+          } else {
+            localStorage.setItem("activeNavHref", link.href);
+            // la animación queda visible hasta cambiar de página
+          }
+        });
+      });
+    };
+
+    attachLinkUnderline();
+  </script>
+</body>
+</html>
+
+   
