@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HOSTELIA | Productos</title>
+  <link rel="icon" type="image/svg+xml" href="../IMG/img/logoh.svg" />
+  <meta
+    name="description"
+    content="Tienda de productos y recuerdos de Hostelia con carrito de compras funcional."
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="../CSS/productos.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="store-header">
+      <div class="container header-row">
+        <a class="brand" href="index.html" aria-label="Volver al inicio de Hostelia">
+          <img src="../IMG/img/logoprincipal.svg" alt="Hostelia" />
+        </a>
+
+        <nav class="store-nav" aria-label="Navegacion principal">
+          <a href="index.html">Inicio</a>
+          <a href="historia-aguadas.html">Historia</a>
+          <a href="casablanca.html">Hoteles</a>
+          <a class="active" href="productos.html">Productos</a>
+        </nav>
+
+        <button
+          class="cart-button"
+          id="cart-button"
+          type="button"
+          aria-label="Abrir carrito de compras"
+          aria-controls="cart-panel"
+          aria-expanded="false"
+        >
+          <span class="cart-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" role="img" focusable="false">
+              <path d="M3 4h2.2l1.3 6.2a2 2 0 0 0 2 1.6h7.6a2 2 0 0 0 2-1.5L20 6.5H7.1" />
+              <circle cx="10" cy="18.5" r="1.6" />
+              <circle cx="17" cy="18.5" r="1.6" />
+            </svg>
+          </span>
+          <span class="cart-copy">
+            <strong>Carrito</strong>
+            <small id="cart-status">0 productos</small>
+          </span>
+          <span class="cart-count" id="cart-count">0</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <p class="eyebrow">Tienda Hostelia</p>
+            <h1>Recuerdos y detalles para llevarte Aguadas contigo</h1>
+            <p class="hero-copy">
+              Explora una seleccion de productos inspirados en el sombrero aguadeno,
+              el cafe y la tradicion local. Agrega lo que quieras al carrito y revisa
+              tu pedido antes de finalizar la compra.
+            </p>
+            <div class="hero-actions">
+              <a class="primary-link" href="#catalogo">Ver catalogo</a>
+              <button class="ghost-link" type="button" id="hero-cart-trigger">Abrir carrito</button>
+            </div>
+          </div>
+
+          <aside class="hero-card">
+            <p class="hero-card-label">Pedido rapido</p>
+            <div class="hero-card-grid">
+              <article>
+                <strong>6 productos</strong>
+                <span>listos para vender</span>
+              </article>
+              <article>
+                <strong>Carrito activo</strong>
+                <span>se guarda en tu navegador</span>
+              </article>
+              <article>
+                <strong>Total automatico</strong>
+                <span>actualizado al instante</span>
+              </article>
+              <article>
+                <strong>Pedido resumido</strong>
+                <span>ideal para checkout</span>
+              </article>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="catalog-section" id="catalogo">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Catalogo</p>
+              <h2>Productos destacados</h2>
+            </div>
+            <p>
+              Cada producto se puede agregar al carrito, aumentar cantidades y eliminar
+              antes de finalizar la compra.
+            </p>
+          </div>
+
+          <div class="product-grid">
+            <article class="product-card" data-id="sombrero" data-name="Sombrero Aguadeno Premium" data-price="85000">
+              <div class="product-media tone-1">
+                <span>Tradicion</span>
+              </div>
+              <div class="product-body">
+                <div class="product-topline">
+                  <p class="product-category">Artesania</p>
+                  <strong>$85.000</strong>
+                </div>
+                <h3>Sombrero Aguadeno Premium</h3>
+                <p>Tejido de iraca con acabado fino para uso diario o como recuerdo especial.</p>
+                <button class="add-to-cart" type="button">Agregar al carrito</button>
+              </div>
+            </article>
+
+            <article class="product-card" data-id="cafe" data-name="Cafe de Altura Hostelia" data-price="32000">
+              <div class="product-media tone-2">
+                <span>Cafe</span>
+              </div>
+              <div class="product-body">
+                <div class="product-topline">
+                  <p class="product-category">Gourmet</p>
+                  <strong>$32.000</strong>
+                </div>
+                <h3>Cafe de Altura Hostelia</h3>
+                <p>Bolsa de cafe tostado con notas dulces y aroma intenso del paisaje cafetero.</p>
+                <button class="add-to-cart" type="button">Agregar al carrito</button>
+              </div>
+            </article>
+
+            <article class="product-card" data-id="mug" data-name="Mug Colonial Aguadas" data-price="28000">
+              <div class="product-media tone-3">
+                <span>Souvenir</span>
+              </div>
+              <div class="product-body">
+                <div class="product-topline">
+                  <p class="product-category">Hogar</p>
+                  <strong>$28.000</strong>
+                </div>
+                <h3>Mug Colonial Aguadas</h3>
+                <p>Taza ilustrada con fachadas tradicionales para acompanar tus bebidas favoritas.</p>
+                <button class="add-to-cart" type="button">Agregar al carrito</button>
+              </div>
+            </article>
+
+            <article class="product-card" data-id="poncho" data-name="Ruana Artesanal Andina" data-price="125000">
+              <div class="product-media tone-4">
+                <span>Abrigo</span>
+              </div>
+              <div class="product-body">
+                <div class="product-topline">
+                  <p class="product-category">Textil</p>
+                  <strong>$125.000</strong>
+                </div>
+                <h3>Ruana Artesanal Andina</h3>
+                <p>Prenda calida de estilo regional, ideal para noches frescas y turismo rural.</p>
+                <button class="add-to-cart" type="button">Agregar al carrito</button>
+              </div>
+            </article>
+
+            <article class="product-card" data-id="postales" data-name="Set de Postales de Aguadas" data-price="18000">
+              <div class="product-media tone-5">
+                <span>Memoria</span>
+              </div>
+              <div class="product-body">
+                <div class="product-topline">
+                  <p class="product-category">Papeleria</p>
+                  <strong>$18.000</strong>
+                </div>
+                <h3>Set de Postales de Aguadas</h3>
+                <p>Coleccion de postales con escenas del pueblo, balcones y paisaje cultural.</p>
+                <button class="add-to-cart" type="button">Agregar al carrito</button>
+              </div>
+            </article>
+
+            <article class="product-card" data-id="pionono" data-name="Caja de Pionono Tradicional" data-price="24000">
+              <div class="product-media tone-6">
+                <span>Dulce</span>
+              </div>
+              <div class="product-body">
+                <div class="product-topline">
+                  <p class="product-category">Sabores</p>
+                  <strong>$24.000</strong>
+                </div>
+                <h3>Caja de Pionono Tradicional</h3>
+                <p>Presentacion lista para regalo con uno de los sabores mas representativos de la region.</p>
+                <button class="add-to-cart" type="button">Agregar al carrito</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <div class="cart-overlay" id="cart-overlay" hidden></div>
+
+  <aside class="cart-panel" id="cart-panel" aria-labelledby="cart-title" aria-hidden="true">
+    <div class="cart-panel-header">
+      <div>
+        <p class="eyebrow">Tu carrito</p>
+        <h2 id="cart-title">Resumen de compra</h2>
+      </div>
+      <button class="cart-close" id="cart-close" type="button" aria-label="Cerrar carrito">&times;</button>
+    </div>
+
+    <div class="cart-items" id="cart-items">
+      <p class="cart-empty">Tu carrito esta vacio. Agrega productos para comenzar.</p>
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span>Subtotal</span>
+        <strong id="cart-total">$0</strong>
+      </div>
+      <div class="cart-actions">
+        <button class="secondary-button" id="clear-cart" type="button">Vaciar carrito</button>
+        <button class="primary-button" id="checkout-button" type="button">Finalizar compra</button>
+      </div>
+      <p class="cart-note" id="checkout-note">
+        El pedido se prepara en el navegador y puede conectarse despues a un checkout real.
+      </p>
+    </div>
+  </aside>
+
+  <template id="cart-item-template">
+    <article class="cart-item">
+      <div class="cart-item-copy">
+        <strong class="cart-item-name"></strong>
+        <span class="cart-item-price"></span>
+      </div>
+      <div class="cart-item-controls">
+        <button class="qty-btn" type="button" data-action="decrease" aria-label="Restar cantidad">-</button>
+        <span class="cart-item-qty">1</span>
+        <button class="qty-btn" type="button" data-action="increase" aria-label="Sumar cantidad">+</button>
+        <button class="remove-btn" type="button">Eliminar</button>
+      </div>
+    </article>
+  </template>
+
+  <script src="../SCRIPT/productos.js"></script>
+</body>
+</html>
